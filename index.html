@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Railan Barbosa - Currency Converter Project</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oxygen:300,400">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <section class="container">
+        <div class="container__title">
+            <h1 class="left">Currency Converter</h1>
+        </div>
+        <div class="wrapper center">
+            <div class="card">
+                <div class="wrapper__input md-padding-vertical">
+                    <label for="input" class="sm-padding-vertical">Amount</label>
+                    <input type="number" id="inputAmount" class="center" value="">
+                </div>
+                <div class="wrapper__select md-padding-vertical">
+                    <label for="selectBaseCurrency" class="sm-padding-vertical">Base currency</label>
+                    <select name="selectBaseCurrency" id="selectBaseCurrency">
+                        <option value="EUR" selected>EUR</option>
+                        <option value="USD">USD</option>
+                        <option value="JPY">JPY</option>
+                    </select>
+                </div>
+                <div class="wrapper__select md-padding-vertical">
+                    <label for="selectTargetCurrency" class="sm-padding-vertical">Target currency</label>
+                    <select name="selectTargetCurrency" id="selectTargetCurrency">
+                        <option value="USD" selected>USD</option>
+                        <option value="EUR">EUR</option>
+                        <option value="JPY">JPY</option>
+                    </select>
+                </div>
+            </div>
+            <div class="sm-margin-top" id="outputConvertedResult"></div>
+            <div class="wrapper--noresult center sm-margin-top" id="noOutput">
+                Please, add an amount before to convert.
+            </div>
+            <div>
+                <button type="submit" class="btn btn--yellow sm-margin-top" id="btnSubmit">
+                    Convert
+                    <i class="fas fa-exchange-alt"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="footer__wrapper sm-padding-vertical right">
+                <a href="https://fixer.io" target="_blank">Powered by Fixer.io</a>
+            </div>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
